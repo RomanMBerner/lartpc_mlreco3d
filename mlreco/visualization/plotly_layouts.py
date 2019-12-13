@@ -32,6 +32,7 @@ def plotly_layout3d(ranges=None,titles=None):
         showlegend=True,
         width=768,
         height=768,
+        legend=dict(x=101,y=0.95),
         #xaxis=titles[0], yaxis=titles[1], zaxis=titles[2],
         margin=dict(l=0,r=0,b=0,t=0),        
         scene = dict(
@@ -50,7 +51,7 @@ def plotly_layout3d(ranges=None,titles=None):
                          backgroundcolor="lightgray", gridcolor="rgb(255, 255, 255)",
                          showbackground=True,
                         ),
-            aspectmode='cube',
+            aspectmode='data',
             camera = dict(
                 up=dict(x=0, y=0, z=1),
                 center=dict(x=0, y=0, z=0),
